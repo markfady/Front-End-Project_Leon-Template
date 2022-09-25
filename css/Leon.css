@@ -1,0 +1,165 @@
+    /* Start Global Rules */
+    :root{
+        --maincolor:#10cab7;
+        --secondarycolor:#2c4755;
+        --graycolor: #575757;
+    }
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:"Work Sans" , sans-serif;
+}
+.container{
+    padding: 0px 15px;
+    margin-right: auto;
+    margin-left: auto;  
+}
+    /* small */
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+    /* Medium */
+@media (min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+    /* Large */
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+    /* End Global Rules */
+
+    /* start header */
+    .header{
+        padding: 20px ;
+    }
+    .header .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header .container img {
+        width: 60px;
+    }
+    .header .links{
+        position: relative;
+    }
+    .header .links:hover .icon span:nth-child(2){
+        width: 100%;
+    }
+    .header .links .icon{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: 30px;
+    }
+    /* For Each span */
+    .header .links .icon span {
+        background-color: #24484f;
+        margin-bottom: 5px;
+        height: 3px;
+    }
+    /* Each span got it's width */
+    .header .links .icon span:first-child{    
+        width: 100%;
+    }
+    .header .links .icon span:nth-child(2){ 
+        width: 60%;
+        transition: 0.3s;
+    }
+    .header .links .icon span:last-child{
+        width: 100%;
+    }
+    .header .links ul{
+        position: absolute;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        right: 0%;
+        display: none;
+        z-index: 1;
+
+    }
+    .header .links:hover  ul{
+        display: block;
+    }
+    .header .links ul li a {
+        color: #333;
+        display: block;
+        padding-top: 15px;
+        text-decoration: none;
+        transition: 0.3s;
+
+    }
+    .header .links ul li a:hover{
+        padding-left: 25px;
+    }
+    /* End Header */
+
+    /* Start Landing */
+    .landing{
+    position: relative;  /* To make the text inside the div(intro text) which inside this div (landing) positioned inside this */
+       background-image: url(../images/Mountain1.jpg);
+       background-size: cover;
+       height: calc(100vh - 64px);   /* Cause the header section takes 64 height and with 100 vh will lead to scroll  */
+       
+    }
+    .landing .intro-text {
+        position: absolute;
+        width: 302px;
+        left: 50%;
+        top: 50%;
+        text-align: center;
+        transform: translate(-50% , -50%);
+    }
+    .landing .intro-text h1{
+       color: var(--maincolor);
+       font-size: 50px;
+       font-weight: bold;
+    }
+    .landing .intro-text p{
+        color: var(--secondarycolor);
+        font-size: 19px;
+        line-height: 1.8;
+    }
+
+    /* Start Work */
+        .work {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        .work .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+            grid-gap: 20px;
+        }
+        .work .work-section {
+            padding:20px;
+            text-align: center;
+        }
+    .work-section i {
+        padding: 10px;
+        font-size: 50px;
+        color: var(--maincolor);
+    }
+    .work-section h3{
+        font-size: 20px;
+        letter-spacing: -1px;
+        line-height: 67px;
+        color: var(--secondarycolor);
+        font-weight: 800;
+    }
+    .work-section p{
+    font-size: 15px;
+    letter-spacing: -1px;
+    line-height: 32px;
+    color: var(--graycolor);
+    font-weight: 400;
+    }
