@@ -1,3 +1,2 @@
 # Leon-Template
-This Project(PSD) opened by Photopea Program 
-Done Using HTML&CSS 
+In This repository I managed to make clone of Leon Template using HTML&CSS 
